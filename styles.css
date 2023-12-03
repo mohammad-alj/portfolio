@@ -25,17 +25,35 @@ html {
 
 body {
     font-family: "opensans", Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 2.986rem;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 3.052rem;
 }
 
 h3 {
-    font-size: 2.5rem;
+    font-size: 2.441rem;
+}
+
+@media screen and (min-width: 786px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 5.61rem;
+    }
+
+    h2 {
+        font-size: 4.209rem;
+    }
+
+    h3 {
+        font-size: 3.157rem;
+    }
 }
