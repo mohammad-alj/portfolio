@@ -18,6 +18,24 @@
     font-display: optional;
 }
 
+/* Global */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Colors */
+
+:root {
+    --color-primary: #30cf5f;
+}
+
+/* Utils */
+.container {
+    padding: 10px 10%;
+}
+
 /* Typography */
 html {
     font-size: 62.5%; /* 10px for people who use 16px as default */
@@ -56,4 +74,37 @@ h3 {
     h3 {
         font-size: 3.157rem;
     }
+}
+
+/* Nav */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-primary);
+    color: white;
+    font-weight: bold;
+}
+
+.nav__logo {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav__links li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.15s;
 }
