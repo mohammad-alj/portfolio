@@ -25,6 +25,31 @@
     margin: 0;
 }
 
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+article {
+    border-bottom: 1px solid rgb(45, 45, 45);
+    padding-bottom: 1rem;
+}
+
+article ul {
+    margin-left: 2rem;
+}
+
+.link {
+    color: rgb(0, 85, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* Colors */
 
 :root {
@@ -36,6 +61,10 @@
     padding: 10px 10%;
 }
 
+.centered-text {
+    text-align: center;
+}
+
 /* Typography */
 html {
     font-size: 62.5%; /* 10px for people who use 16px as default */
@@ -43,24 +72,36 @@ html {
 
 body {
     font-family: "opensans", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    background-color: rgb(13, 13, 13);
+    color: white;
 }
 
-h1 {
-    font-size: 2.986rem;
-}
-
+h1,
 h2 {
-    font-size: 3.052rem;
+    margin-top: 3rem;
+    margin-bottom: 0.6rem;
 }
 
 h3 {
-    font-size: 2.441rem;
+    margin-top: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.72rem;
+}
+
+h3 {
+    font-size: 2.252rem;
 }
 
 @media screen and (min-width: 786px) {
     body {
-        font-size: 1.5rem;
+        font-size: 2.1rem;
     }
 
     h1 {
@@ -74,10 +115,22 @@ h3 {
     h3 {
         font-size: 3.157rem;
     }
+
+    h1,
+    h2 {
+        margin-top: 5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
 }
 
 /* Nav */
 .nav {
+    height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,7 +140,7 @@ h3 {
 }
 
 .nav__logo {
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
     text-decoration: none;
 }
@@ -95,7 +148,7 @@ h3 {
 .nav__links {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .nav__links li {
@@ -107,4 +160,20 @@ h3 {
     color: white;
     text-decoration: none;
     transition: color 0.15s;
+    font-size: 2rem;
+}
+
+/* Certificate */
+.certificate-img {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 786px) {
+    .image-article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
 }
