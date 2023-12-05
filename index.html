@@ -7,9 +7,13 @@
         <title>Homepage</title>
     </head>
     <body>
-        <nav class="nav container">
+        <nav class="nav">
             <a class="nav__logo" href="./">Portfolio</a>
-            <ul class="nav__links">
+
+            <button class="nav__dropdown-btn" id="nav__dropdown">
+                <img src="./pictures/drop_down_menu.svg" alt="dropdown menu" />
+            </button>
+            <ul class="nav__links hide" id="nav__links">
                 <li><a class="nav__link" href="#about">about</a></li>
                 <li><a class="nav__link" href="#skills">skills</a></li>
                 <li>
@@ -22,7 +26,7 @@
         <div class="container">
             <main>
                 <h1 class="centered-text">My Portfolio</h1>
-                <article>
+                <section>
                     <h2 id="about">About me</h2>
                     <p>
                         My name is Mohammad, and I am 15 years old. I would like
@@ -31,23 +35,30 @@
                         gaining knowledge and skills in order to fulfill my
                         passion.
                     </p>
-                </article>
-                <article id="skills">
+                </section>
+                <section id="skills">
                     <h2>Skills</h2>
-                    I have experience on popular languages, such as Python, C,
-                    Javascript, Typescript, others (like rust).
-                    <br />
-                    <br />
-
-                    However, I have the most experience in JavaScript and
-                    TypeScript, with frameworks such as React, Next.js, and
-                    Express.js. I've also worked on various projects utilizing
-                    these technologies.
-                </article>
-                <article id="certificates">
+                    <div class="skills">
+                        <img
+                            src="./pictures/Python-logo-notext.svg.png"
+                            alt="Python"
+                        />
+                        <img src="./pictures/django.jpg" alt="django" />
+                        <img src="./pictures/flask.png" alt="flask" />
+                        <img src="./pictures/node.png" alt="nodejs" />
+                        <img
+                            src="./pictures/JavaScript-logo.png"
+                            alt="JavaScript"
+                        />
+                        <img src="./pictures/typescript.png" alt="typescript" />
+                        <img src="./pictures/express.png" alt="express js" />
+                        <img src="./pictures/react.png" alt="react js" />
+                    </div>
+                </section>
+                <section id="certificates">
                     <h2>Certificates</h2>
                     <div class="image-article">
-                        <div class="col">
+                        <div class="col cert-text">
                             <h3>I took CS50</h3>
                             <p>
                                 On july 30 2023 I finished my
@@ -70,11 +81,11 @@
                             alt="my cs50 certificate"
                         />
                     </div>
-                </article>
-                <article id="projects">
+                </section>
+                <section id="projects">
                     <h2>projects</h2>
-                    <ul>
-                        <li>
+                    <ul class="projects">
+                        <li class="project">
                             <a
                                 class="link"
                                 href="https://github.com/mohammad-alj/myTodo"
@@ -82,21 +93,19 @@
                                 github)</a
                             >
                         </li>
-                        <li>
+                        <li class="project">
                             <a
                                 class="link"
                                 href="https://game-hub-qwe.netlify.app"
                                 >Game discovery application (react)</a
                             >
                         </li>
-                        <li>...more soon</li>
                     </ul>
-                </article>
+                </section>
             </main>
             <footer id="contact">
                 <h2 class="centered-text">contact me</h2>
                 <div class="flex" style="gap: 3rem">
-                    <div class="flex flex-col">+966 53 520 2683</div>
                     <div>
                         <a
                             class="link flex flex-col"
@@ -111,5 +120,7 @@
                 </div>
             </footer>
         </div>
+        <button id="go-to-up">^</button>
+        <script src="./script.js"></script>
     </body>
 </html>
