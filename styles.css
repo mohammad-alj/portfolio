@@ -185,7 +185,7 @@ h3 {
     }
 
     .nav__links {
-        background: var(--color-secondary);
+        background: var(--color-primary);
         position: relative;
         bottom: 7px;
         padding: 0;
