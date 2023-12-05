@@ -22,6 +22,7 @@
 :root {
     --color-primary: #30cf5f;
     --color-secondary: #131d15;
+    --color-secondary-ish: #015119;
     --color-dark: rgb(14, 14, 14);
     --color-link: rgb(0, 131, 178);
 }
@@ -160,7 +161,7 @@ h3 {
 
 .nav__links {
     margin-top: 2rem;
-    background: var(--color-secondary);
+    background: var(--color-secondary-ish);
     border-radius: 10px;
     justify-content: stretch;
     align-items: center;
