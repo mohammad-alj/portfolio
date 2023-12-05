@@ -22,7 +22,7 @@
 :root {
     --color-primary: #30cf5f;
     --color-secondary: #131d15;
-    --color-secondary-ish: #015119;
+    --color-secondary-ish: #238c42;
     --color-dark: rgb(14, 14, 14);
     --color-link: rgb(0, 131, 178);
 }
@@ -65,7 +65,7 @@ button {
 
 @media screen and (min-width: 425px) {
     .container {
-        padding: 10px 5%;
+        padding: 10px 3%;
     }
 }
 
@@ -249,6 +249,7 @@ section h2 {
 .skills img {
     height: 100px;
     margin: 10px;
+    object-fit: cover;
 }
 
 /* projects */
