@@ -15,7 +15,7 @@ document.querySelectorAll('.nav__link').forEach(
         })
 );
 
-const goToTop = $('#go-to-up');
+const goToTop = $('#go-to-top');
 
 goToTop.onclick = () => {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });

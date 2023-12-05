@@ -253,7 +253,7 @@ section h2 {
     margin: 20px 0;
 }
 
-#go-to-up {
+#go-to-top {
     transition: display 0.15s;
     display: none;
     position: fixed;
@@ -266,4 +266,11 @@ section h2 {
     border: none;
     background-color: var(--color-primary);
     cursor: pointer;
+}
+
+#go-to-top img {
+    width: 50%;
+    position: relative;
+    right: 0.5px;
+    top: 2px;
 }
