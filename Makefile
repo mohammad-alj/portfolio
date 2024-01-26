@@ -3,7 +3,7 @@ all: build
 build: 
 	go build -o ./bin/portfolio ./cmd/main/main.go 
 
-dev: 
+run: 
 	go run cmd/main/main.go
 
 watch-css: 
