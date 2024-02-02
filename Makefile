@@ -10,7 +10,7 @@ dev:
 	go run cmd/portfolio/main.go
 
 watch-css: 
-	npx tailwindcss -o static/styles.css --watch
+	npx tailwindcss -o static/styles/styles.css --watch
 
 build-css: 
-	npx tailwindcss -o static/styles.css
+	npx tailwindcss -o static/styles/styles.css
