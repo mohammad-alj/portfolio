@@ -5,28 +5,55 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="/static/styles.css" />
+        <style>
+            .h-min-screen {
+                min-height: 100vh;
+            }
+
+            .top-gradient {
+                height: 35rem;
+                width: 100%;
+                background: rgb(17, 24, 39);
+                background: linear-gradient(
+                    4deg,
+                    rgba(17, 24, 39, 1) 50%,
+                    rgba(40, 52, 71, 1) 100%
+                );
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: -10;
+            }
+        </style>
     </head>
-    <body class="bg-blue-50">
-        <header
-            class="bg-gradient-to-tr from-gray-900 to-gray-700 text-white px-12 py-5 text-lg flex justify-between"
-        >
-            <h1 class="text-2xl font-bold tracking-wide">
-                <a href="#">M<span class="text-blue-200">alj</span></a>
-            </h1>
+    <body class="h-min-screen bg-gray-900 -z-10">
+        <div class="top-gradient"></div>
+        <header class="text-white px-12 py-5 text-lg flex justify-between">
+            <a href="/" class="text-2xl font-bold tracking-wide">
+                M<span class="text-blue-200">alj</span>
+            </a>
             <nav>
                 <ul class="flex items-center gap-6">
                     <li>
-                        <a href="#" class="hover:text-blue-300 transition-all"
+                        <a
+                            href="#"
+                            class="hover:text-blue-300 transition-all bg-transparent"
                             >Projects</a
                         >
                     </li>
                     <li>
-                        <a href="#" class="hover:text-blue-300 transition-all">
+                        <a
+                            href="#"
+                            class="hover:text-blue-300 transition-all bg-transparent"
+                        >
                             Certificates
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="hover:text-blue-300 transition-all">
+                        <a
+                            href="#"
+                            class="hover:text-blue-300 transition-all bg-transparent"
+                        >
                             Blog
                         </a>
                     </li>
