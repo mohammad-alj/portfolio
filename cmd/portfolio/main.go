@@ -9,9 +9,7 @@ import (
 
 func main() {
 	// Serve static files
-	fs := http.FileServer(http.Dir("static"))
-	staticHandler := http.StripPrefix("/static/", fs)
-	http.Handle("/static/", staticHandler)
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
 	// Routes
 	http.HandleFunc("/", handlers.Index)
