@@ -5,7 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="/static/styles/styles.css" />
-        <script defer src="/static/scripts/language.js"></script>
+        <script defer src="/static/scripts/language.js"></script>{{ if eq .Lang "ar"}}
+        <style>
+            @font-face {
+                font-family: 'arabic-font';
+                src: url('/static/fonts/arabic/arabic-font.woff2') format('woff2')
+            }
+
+            body {
+                font-family: 'Roboto', 'arabic-font';
+            }
+        </style>{{end}}
     </head>
     <body class="h-min-screen bg-gray-900 -z-10 px-24" {{if eq .Lang "ar"}}dir="rtl"{{end}}>
         <div class="top-gradient"></div>
@@ -17,7 +27,7 @@
                 </a>
                 <button 
                     id="lang-toggler" 
-                    class="border border-blue-300 border-2 w-10 h-10 rounded fixed top-5 right-6 md:static flex justify-center items-center"
+                    class="border border-blue-300 border-2 w-10 h-10 rounded absolute top-5 right-6 md:static flex justify-center items-center"
                     >
                 {{ if eq .Lang "ar"}}EN{{else}}AR{{end}}
                 </button>
