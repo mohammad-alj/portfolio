@@ -6,8 +6,29 @@ import (
 	"net/http"
 )
 
-func handlerFuncBuilder(tmplName string, data any) func(w http.ResponseWriter, r *http.Request) {
+type pageData struct {
+	Lang string
+}
+
+var Index = templateHandlerBuilder("index")
+
+func getLangCookie(w http.ResponseWriter, r *http.Request) *http.Cookie {
+	langCookie, err := r.Cookie("lang")
+	if err != nil || !(langCookie.Value == "ar" || langCookie.Value == "en") {
+		langCookie = &http.Cookie{
+			Name:   "lang",
+			Value:  "en",
+			MaxAge: 365 * 24 * 60 * 60,
+			Path:   "/",
+		}
+		http.SetCookie(w, langCookie)
+	}
+	return langCookie
+}
+
+func templateHandlerBuilder(tmplName string) func(w http.ResponseWriter, r *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
+		langCookie := getLangCookie(w, r)
 		tmpl, err := template.ParseFiles(
 			"templates/layout.html",
 			fmt.Sprintf("templates/%s.html", tmplName), // here is the to be rendered template
@@ -16,8 +37,29 @@ func handlerFuncBuilder(tmplName string, data any) func(w http.ResponseWriter, r
 			w.Write([]byte(err.Error()))
 			return
 		}
+
+		data := pageData{
+			Lang: langCookie.Value,
+		}
 		tmpl.Execute(w, data)
 	}
 }
 
-var Index = handlerFuncBuilder("index", nil)
+func ToggleLangHandler(w http.ResponseWriter, r *http.Request) {
+	c := getLangCookie(w, r)
+	var val string
+
+	// Togglin
+	if c.Value == "ar" {
+		val = "en"
+	} else {
+		val = "ar"
+	}
+
+	http.SetCookie(w, &http.Cookie{
+		Name:   "lang",
+		Value:  val,
+		MaxAge: 365 * 24 * 60 * 60,
+		Path:   "/",
+	})
+}

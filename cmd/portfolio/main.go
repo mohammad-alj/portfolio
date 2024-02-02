@@ -13,6 +13,7 @@ func main() {
 
 	// Routes
 	http.HandleFunc("/", handlers.Index)
+	http.HandleFunc("/toggle-lang", handlers.ToggleLangHandler)
 
 	// Serve the website
 	const PORT int = 3000
