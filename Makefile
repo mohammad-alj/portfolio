@@ -8,3 +8,6 @@ run:
 
 watch-css: 
 	npx tailwindcss -o static/styles.css --watch
+
+build-css: 
+	npx tailwindcss -o static/styles.css

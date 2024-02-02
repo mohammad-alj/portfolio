@@ -6,7 +6,33 @@
         <title>Document</title>
         <link rel="stylesheet" href="/static/styles.css" />
     </head>
-    <body>
+    <body class="bg-blue-50">
+        <header
+            class="bg-gradient-to-tr from-gray-900 to-gray-700 text-white px-12 py-5 text-lg flex justify-between"
+        >
+            <h1 class="text-2xl font-bold tracking-wide">
+                <a href="#">M<span class="text-blue-200">alj</span></a>
+            </h1>
+            <nav>
+                <ul class="flex items-center gap-6">
+                    <li>
+                        <a href="#" class="hover:text-blue-300 transition-all"
+                            >Projects</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-blue-300 transition-all">
+                            Certificates
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-blue-300 transition-all">
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <main>{{ template "content" . }}</main>
     </body>
 </html>
