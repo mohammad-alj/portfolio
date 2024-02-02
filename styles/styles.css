@@ -49,9 +49,11 @@ body {
     height: 35rem;
     width: 100%;
     background: rgb(17, 24, 39);
-    background: linear-gradient(4deg,
-            rgba(17, 24, 39, 1) 50%,
-            rgba(40, 52, 71, 1) 100%);
+    background: linear-gradient(
+        4deg,
+        rgba(17, 24, 39, 1) 50%,
+        rgba(40, 52, 71, 1) 100%
+    );
     position: absolute;
     top: 0;
     right: 0;
