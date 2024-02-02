@@ -5,8 +5,67 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="/static/styles.css" />
+        <style>
+            .h-min-screen {
+                min-height: 100vh;
+            }
+
+            .top-gradient {
+                height: 35rem;
+                width: 100%;
+                background: rgb(17, 24, 39);
+                background: linear-gradient(
+                    4deg,
+                    rgba(17, 24, 39, 1) 50%,
+                    rgba(40, 52, 71, 1) 100%
+                );
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: -10;
+            }
+        </style>
     </head>
-    <body>
+    <body class="h-min-screen bg-gray-900 -z-10">
+        <div class="top-gradient"></div>
+        <header
+            class="text-white md:text-left px-12 py-5 text-lg flex flex-col items-center md:flex-row md:justify-between"
+        >
+            <a href="/" class="mb-2 md:mb-0 text-2xl font-bold tracking-wide">
+                M<span class="text-blue-200">alj</span>
+            </a>
+            <nav
+                class="w-min border-b border-b-blue-200 pb-1 md:pb-0 md:border-none"
+            >
+                <ul
+                    class="flex items-center gap-10 md:gap-6 justify-center md:justify-start"
+                >
+                    <li>
+                        <a
+                            href="#"
+                            class="hover:text-blue-200 transition-all bg-transparent"
+                            >Projects</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="hover:text-blue-200 transition-all bg-transparent"
+                        >
+                            Certificates
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="hover:text-blue-200 transition-all bg-transparent"
+                        >
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <main>{{ template "content" . }}</main>
     </body>
 </html>
