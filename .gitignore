@@ -1,2 +1,2 @@
-bin/
-static/styles/styles.css
+./bin/
+./static/styles/styles.css
