@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Malj: {{ template "title" }}</title>
         <link rel="stylesheet" href="/static/styles/styles.css" />
         <script defer src="/static/scripts/language.js"></script>{{ if eq .Lang "ar"}}
         <style>
@@ -17,10 +17,10 @@
             }
         </style>{{end}}
     </head>
-    <body class="h-min-screen bg-gray-900 -z-10 px-24" {{if eq .Lang "ar"}}dir="rtl"{{end}}>
+    <body class="text-white h-min-screen bg-gray-900 -z-10 px-24" {{if eq .Lang "ar"}}dir="rtl"{{end}}>
         <div class="top-gradient"></div>
         <header
-            class="text-white md:text-left py-5 text-lg flex flex-col items-center md:flex-row md:justify-between">
+            class="md:text-left py-5 text-lg flex flex-col items-center md:flex-row md:justify-between">
             <div class="flex gap-4 justify-around w-full md:justify-start">
                 <a href="/" class="mb-2 md:mb-0 text-2xl font-bold tracking-wide">
                     M<span class="text-blue-200">alj</span>

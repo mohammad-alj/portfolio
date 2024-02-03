@@ -31,14 +31,10 @@
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('/static/fonts/roboto/Roboto-LightItalic.woff2') format('woff2');
-    font-weight: 300;
-    font-style: italic;
-}
-
-body {
-    font-family: 'Roboto';
+    font-family: 'arabic-font';
+    src: url('/static/fonts/arabic/arabic-font.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
 }
 
 .h-min-screen {
@@ -49,13 +45,15 @@ body {
     height: 35rem;
     width: 100%;
     background: rgb(17, 24, 39);
-    background: linear-gradient(
-        4deg,
-        rgba(17, 24, 39, 1) 50%,
-        rgba(40, 52, 71, 1) 100%
-    );
+    background: linear-gradient(4deg,
+            rgba(17, 24, 39, 1) 50%,
+            rgba(40, 52, 71, 1) 100%);
     position: absolute;
     top: 0;
     right: 0;
     z-index: -10;
+}
+
+.h-60-precent-screen {
+    height: 60vh;
 }
