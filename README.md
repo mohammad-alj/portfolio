@@ -22,7 +22,7 @@ git clone https://github.com/mohammad-alj/portfolio
 cd portfolio
 ```
 
-2. Build the CSS
+2. Build the CSS (make sure you have npm, which will come with the npx command)
 
 ```bash
 make build-css
