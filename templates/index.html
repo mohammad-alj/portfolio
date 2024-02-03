@@ -14,7 +14,7 @@
     <article
         class="border-blue-300 border-2 rounded p-7 row-span-2 relative"
     >
-        <img src="/static/images/person.svg" class="size-28 -top-12 {{if eq .Lang "ar"}}-left-16{{else}}-right-16{{end}} absolute {{if eq .Lang "ar"}}-rotate-12{{else}}rotate-12{{end}} hover:rotate-0 transition-transform duration-300 ease-out"/>
+        <img src="/static/images/person.svg" class="size-16 md:size-28 -top-10 md:-top-12 {{if eq .Lang "ar"}}-left-9 md:-left-16{{else}}-right-9 md:-right-16 {{end}} absolute {{if eq .Lang "ar"}}-rotate-12{{else}}rotate-12{{end}} hover:rotate-0 transition-transform duration-300 ease-out"/>
         <h2 class="text-5xl text-blue-200 mb-2">
             {{ if eq .Lang "ar" }}من {{else}}Who am {{end}}<span
                 class="text-blue-300"
@@ -30,7 +30,7 @@
         <img
             src="/static/images/skills.svg"
             alt=""
-            class="size-28 -bottom-16 {{if eq .Lang "ar"}}-right-16{{else}}-left-16{{end}} md:{{if eq .Lang "ar"}}-left-16{{else}}-right-16{{end}} absolute {{if eq .Lang "ar"}}rotate-12{{else}}-rotate-12{{end}} hover:rotate-0 transition-transform duration-300 ease-out"
+            class="size-16 md:size-28 -bottom-10 md:-bottom-16 {{if eq .Lang "ar"}}-right-10{{else}}-left-10{{end}} md:{{if eq .Lang "ar"}}-left-16{{else}}-right-16{{end}} absolute {{if eq .Lang "ar"}}rotate-12{{else}}-rotate-12{{end}} hover:rotate-0 transition-transform duration-300 ease-out"
         />
         <h2 class="text-5xl text-blue-200 mb-2">
             {{ if eq .Lang "ar" }}ما هي {{else}}What are {{end}}<span

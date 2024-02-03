@@ -22,7 +22,13 @@ git clone https://github.com/mohammad-alj/portfolio
 cd portfolio
 ```
 
-2. Run the application
+2. Build the CSS
+
+```bash
+make build-css
+```
+
+3. Run the application
 
 ```bash
 make run
@@ -35,5 +41,5 @@ make build
 ./bin/portfolio
 ```
 
-3. Preview the portfolio
+4. Preview the portfolio
    Open http://localhost:3000 in your browser
