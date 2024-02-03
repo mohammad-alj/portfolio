@@ -1,18 +1,18 @@
 {{ define "title" }}Homepage{{ end }} {{ define "content" }}
 <div
-    class="px-24 -z-10 top-0 right-0 left-0 bottom-0 h-60-precent-screen flex justify-center items-center"
+    class="px-24 -z-10 h-60-precent-screen flex justify-center items-center"
 >
-    <h1 class="text-6xl my-16 md:my-0 md:text-7xl text-center">
-        {{ if eq .Lang "ar" }}السلام عليكم، أنا {{else}}Hi, I am {{end}}<br class="md:hidden"/><span
-            class="text-blue-300"
-            >{{if eq .Lang "ar" }}محمد الجعفر{{else}}Mohammad
-            Al-jaafar{{end}}</span
-        >
+    <h1 class="text-6xl my-16 md:my-0 md:text-7xl text-center shadow blur-sha">
+        <span class="text-2xl md:text-3xl lg:text-6xl">{{ if eq .Lang "ar" }}السلام عليكم، أنا {{else}}Hi, I am {{end}}</span><br class="lg:hidden"/>
+        <span class="text-blue-300">
+            {{if eq .Lang "ar" }}محمد الجعفر{{else}}Mohammad
+            Al-jaafar{{end}}
+        </span>
     </h1>
 </div>
 <section class="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-y-5 md:gap-y-0 md:grid-rows-6 gap-x-24">
     <article
-        class="border-blue-300 border-2 rounded p-5 row-span-2 relative"
+        class="border-blue-300 border-2 rounded p-7 row-span-2 relative"
     >
         <img src="/static/images/person.svg" class="size-28 -top-12 {{if eq .Lang "ar"}}-left-16{{else}}-right-16{{end}} absolute {{if eq .Lang "ar"}}-rotate-12{{else}}rotate-12{{end}} hover:rotate-0 transition-transform duration-300 ease-out"/>
         <h2 class="text-5xl text-blue-200 mb-2">
@@ -21,24 +21,62 @@
                 >{{ if eq .Lang "ar" }}أنا؟{{else}}I?{{end}}</span
             >
         </h2>
-        <p class="text-3xl">
-        {{ if eq .Lang "ar"}}أنا شاب يبلغ 15 عامًا من سوريا، وأطمح أن أصبح مهندس برمجيات حاليًا في المرحلة الثانوية.<br/> أتخصص في تطوير المواقع، خاصةً في تطوير الواجهات الخلفية.{{else}}I am a 15-year-old aspiring software engineer from Syria currently in high school. I specialize in full-stack development, especially in the back-end.{{end}}
+        <p class="text-xl md:text-2xl">
+        {{ if eq .Lang "ar"}}أنا شاب يبلغ 15 عامًا من سوريا حاليًا في المرحلة الثانوية، وأطمح أن أصبح مهندس برمجيات.<br/> أتخصص في تطوير المواقع، خاصةً في تطوير الواجهات الخلفية.{{else}}I am a 15-year-old aspiring software engineer from Syria currently in high school. I specialize in full-stack development, especially in the back-end.{{end}}
         </p>
     </article>
     <div></div>
-    <article class="border-blue-300 border-2 rounded p-5 row-span-2 relative">
+    <article class="border-blue-300 border-2 rounded p-7 row-span-6 relative h-fit">
         <img
-            src="/static/images/coding.svg"
+            src="/static/images/skills.svg"
             alt=""
-            class="size-36 -bottom-20 {{if eq .Lang "ar"}}-right-16{{else}}-left-16{{end}} md:{{if eq .Lang "ar"}}-left-16{{else}}-right-16{{end}} absolute {{if eq .Lang "ar"}}rotate-12{{else}}-rotate-12{{end}} hover:rotate-0 transition-transform duration-300 ease-out"
+            class="size-28 -bottom-16 {{if eq .Lang "ar"}}-right-16{{else}}-left-16{{end}} md:{{if eq .Lang "ar"}}-left-16{{else}}-right-16{{end}} absolute {{if eq .Lang "ar"}}rotate-12{{else}}-rotate-12{{end}} hover:rotate-0 transition-transform duration-300 ease-out"
         />
         <h2 class="text-5xl text-blue-200 mb-2">
             {{ if eq .Lang "ar" }}ما هي {{else}}What are {{end}}<span
                 class="text-blue-300"
                 >{{ if eq .Lang "ar" }}قدراتي؟{{else}}my
-                skills?{{end}}</span
+                abilities?{{end}}</span
             >
         </h2>
+        <ul class="flex gap-4 mt-3 flex-wrap justify-center items-center">
+            <li class="flex flex-col justify-center items-center">
+                <img src="/static/images/pressure.svg" alt="pressure icon" class="size-28">
+                <p class="border-2 border-white rounded p-2 mt-2 text-lg">
+                {{ if eq .Lang "ar"}}
+                العمل تحت الضغط
+                {{ else }}
+                working under pressure
+                {{ end }}
+                </p>
+            </li>
+            <li class="flex flex-col justify-center items-center">
+                <img src="/static/images/book.svg" alt="pressure icon" class="size-28">
+                <p class="border-2 border-white rounded p-2 mt-2 text-lg">
+                {{ if eq .Lang "ar"}}
+                التعلم السريع والدائم
+                {{ else }}
+                Quick and constant learning
+                {{ end }}
+                </p>
+            </li>
+            <li class="flex flex-col justify-center items-center">
+                <img src="/static/images/application.svg" alt="pressure icon" class="size-28">
+                <p class="border-2 border-white rounded p-2 mt-2 text-lg">
+                {{ if eq .Lang "ar"}}
+                صنع تطبيقات قابلة للتوسع
+                {{ else }}
+                Making scalable applications
+                {{ end }}
+                </p>
+            </li>
+            <li class="flex flex-col justify-center items-center">
+                <img src="/static/images/coding.svg" alt="pressure icon" class="size-28">
+                <p class="border-2 border-white rounded p-2 mt-2 text-lg text-center">
+                {{ if eq .Lang "ar" }}خبرة بعدة من لغات البرمجة مثل{{ else }}Proficient in various<br/>programming languages such as{{end}}<br/>Go, Javascript, Python
+                </p>
+            </li>
+        </ul>
     </article>
     <div class=""></div>
 </section>

@@ -30,13 +30,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'arabic-font';
-    src: url('/static/fonts/arabic/arabic-font.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-
 .h-min-screen {
     min-height: 100vh;
 }
@@ -44,7 +37,6 @@
 .top-gradient {
     height: 35rem;
     width: 100%;
-    background: rgb(17, 24, 39);
     background: linear-gradient(4deg,
             rgba(17, 24, 39, 1) 50%,
             rgba(40, 52, 71, 1) 100%);
