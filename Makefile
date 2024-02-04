@@ -1,4 +1,5 @@
-all: build
+all:
+	make build-css && make build
 
 build: 
 	go build -o ./bin/portfolio ./cmd/portfolio/main.go 
