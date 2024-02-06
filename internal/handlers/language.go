@@ -17,6 +17,7 @@ func ToggleLangHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	http.SetCookie(w, c)
+	w.WriteHeader(http.StatusOK)
 }
 
 func getLangCookie(w http.ResponseWriter, r *http.Request) *http.Cookie {
