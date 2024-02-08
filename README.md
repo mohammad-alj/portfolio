@@ -34,17 +34,12 @@ make build-css
 make run
 ```
 
-or compile it
+or compile it and execute
 
 ```bash
 make build
-```
-
-4. Execute the application
-
-```bash
 ./portfolio
 ```
 
-5. Preview the portfolio
+4. Preview the portfolio
    Open http://localhost:3000 in your browser
