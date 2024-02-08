@@ -38,8 +38,13 @@ or compile it
 
 ```bash
 make build
-./bin/portfolio
 ```
 
-4. Preview the portfolio
+4. Execute the application
+
+```bash
+./portfolio
+```
+
+5. Preview the portfolio
    Open http://localhost:3000 in your browser

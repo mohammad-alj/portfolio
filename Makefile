@@ -9,7 +9,7 @@ build:
 clean:
 	rm ./${BINARY_NAME}
 
-dev: 
+run: 
 	go run cmd/portfolio/main.go
 
 watch-css: 
